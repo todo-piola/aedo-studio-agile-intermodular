@@ -1,0 +1,37 @@
+
+#encabezado {
+    display: flex;
+    width: 100%;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+}
+#logo {
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+#hero-movil img {
+    width: 100%;
+    height: auto;
+}
+
+#hero-movil {
+    background-size: cover; 
+    background-position: center; 
+    min-height: 500px;
+}
+
+#hero-escritorio {
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+}
+
+#hero-escritorio img {
+    width: 100%;
+    height: auto;
+}
+
