@@ -1,3 +1,7 @@
+/* ========================================
+   TIPOGRAFÍAS
+   ======================================== */
+
 @font-face {
     font-family: titulos;
     src: url(../recursos/tipografias/MiriamLibre-Regular.woff);
@@ -8,65 +12,84 @@
     src: url(../recursos/tipografias/DroidSans.ttf);
 }
 
-.texto-tarjeta{
+/* Aplicación de tipografías */
+.hero-cta, #peliculas-esperadas {
+    font-family: titulos;
+}
+
+.texto-tarjeta, .texto-cta {
     font-family: cuerpo;
 }
 
-.hero-cta{
-    font-family: titulos;
+.texto-cta {
+    text-align: center;
+    margin: 0; /* Elimina margen por defecto del <p> */
 }
 
-#peliculas-esperadas {
-    font-family: titulos;
-}
+/* ========================================
+   HEADER Y FOOTER
+   ======================================== */
 
-#encabezado {
+#encabezado, #footer {
     display: flex;
     width: 100%;
     background-color: #000000;
     justify-content: center;
     align-items: center;
 }
-#logo {
-    width: 30%;
+
+/* Logos responsive - 40% en móvil, 20% desde md */
+#logo-encabezado, #logo-footer {
+    width: 40%;
     justify-content: center;
     align-items: center;
     background-color: #000000;
+    transition: width 0.3s ease;
 }
 
-#hero-movil img {
-    width: 100%;
-    height: auto;
+@media (min-width: 768px) {
+    #logo-encabezado, #logo-footer {
+        width: 20%;
+    }
+}
+
+/* ========================================
+   SECCIONES HERO
+   ======================================== */
+
+/* Hero móvil y escritorio - estilos compartidos */
+#hero-movil, #hero-escritorio {
+    background-size: cover;
+    background-position: center;
 }
 
 #hero-movil {
-    background-size: cover; 
-    background-position: center; 
     min-height: 500px;
 }
 
 #hero-escritorio {
-    background-size: cover;
-    background-position: center;
     min-height: 600px;
 }
 
-#hero-escritorio img {
+#hero-movil img, #hero-escritorio img {
     width: 100%;
     height: auto;
 }
 
-/* Hace que todas las columnas se ajusten igual */
+/* ========================================
+   GRID DE TARJETAS
+   ======================================== */
+
+/* Contenedor del grid */
 .grid-tarjeta {
-  display: flex;
-  transition: all 0.3s;
+    display: flex;
+    transition: all 0.3s;
 }
 
-/* Hace que todas las tarjetas se estiren igual */
 .grid-tarjeta > div {
-  flex: 1;
-  display: flex;
-  align-items: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .grid-tarjeta:hover {
@@ -74,22 +97,77 @@
     cursor: pointer;
 }
 
-.icono-grid {
-    width: 80px;
-    margin-left: 5px;
+/* Tarjetas individuales */
+.tarjeta {
+    background-color: #6c757d;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Móvil y Tablet*/
+.tarjeta:hover {
+    transform: scale(1.05);
+    background-color: #5a6268;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Iconos dentro de las tarjetas */
+.icono-grid {
+    width: 60px;
+    margin-left: 5px;
+    margin-top: 5px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover .icono-grid {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Texto de las tarjetas */
+.texto-tarjeta {
+    transition: color 0.3s ease;
+}
+
+.tarjeta:hover .texto-tarjeta {
+    font-style:oblique
+}
+
+/* Sombra amarilla en hover */
+.tarjeta:hover {
+    box-shadow: 0 8px 24px rgba(255, 193, 7, 0.6), /* Sombra exterior amarilla */
+                0 0 40px rgba(255, 193, 7, 0.4);    /* Resplandor amarillo */
+}
+/* ========================================
+   ELEMENTOS DECORATIVOS
+   ======================================== */
+
+.linea-blanca {
+    border: none;
+    border-top: 2px solid white;
+    margin: 20px auto;
+    width: 95%;
+}
+
+/* ========================================
+   MEDIA QUERIES
+   ======================================== */
+
+/* Móvil y tablet pequeña */
 @media (max-width: 576px) {
-  .grid-tarjeta > div {
-    min-height: 120px;
-  }
+    .grid-tarjeta > div {
+        min-height: 120px;
+    }
 }
 
 /* Escritorio */
 @media (min-width: 993px) {
-  .grid-tarjeta > div {
-    min-height: 180px;
-    max-height: 120px;
-  }
+    .grid-tarjeta > div {
+        min-height: 220px;
+        max-height: 120px;
+    }
 }
