@@ -12,6 +12,12 @@
     font-family: cuerpo;
 }
 
+.texto-cta{
+    font-family: cuerpo;
+    text-align: center;
+    margin: 0;
+}
+
 .hero-cta{
     font-family: titulos;
 }
