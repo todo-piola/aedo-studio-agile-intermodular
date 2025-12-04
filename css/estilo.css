@@ -16,22 +16,33 @@
     font-family: titulos;
 }
 
+
+
 #peliculas-esperadas {
     font-family: titulos;
 }
 
-#encabezado {
+#encabezado, #footer {
     display: flex;
     width: 100%;
     background-color: #000000;
     justify-content: center;
     align-items: center;
 }
-#logo {
-    width: 30%;
+
+#logo-encabezado, #logo-footer {
+    width: 40%;
     justify-content: center;
     align-items: center;
     background-color: #000000;
+    transition: width 0.3s ease;
+}
+
+/* A partir de md (768px) el logo ocupa 20% */
+@media (min-width: 768px) {
+    #logo-encabezado, #logo-footer {
+        width: 20%;
+    }
 }
 
 #hero-movil img {
@@ -62,6 +73,18 @@
   transition: all 0.3s;
 }
 
+.tarjeta {
+    background-color: #6c757d; /* o el color que prefieras */
+    transition: all 0.3s;
+} 
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    background-color: #5a6268; /* Un tono más oscuro */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+
 /* Hace que todas las tarjetas se estiren igual */
 .grid-tarjeta > div {
   flex: 1;
@@ -75,8 +98,23 @@
 }
 
 .icono-grid {
-    width: 80px;
+    width: 60px;
     margin-left: 5px;
+    margin-top: 5px;
+}
+
+.tarjeta {
+    min-height: 250px;   /* ajusta según necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.linea-blanca {
+    border: none;
+    border-top: 2px solid white;
+    margin: 20px auto;
+    width: 95%;
 }
 
 /* Móvil y Tablet*/
@@ -89,7 +127,7 @@
 /* Escritorio */
 @media (min-width: 993px) {
   .grid-tarjeta > div {
-    min-height: 180px;
+    min-height: 220px;
     max-height: 120px;
   }
 }
