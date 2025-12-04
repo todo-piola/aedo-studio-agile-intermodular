@@ -1,3 +1,24 @@
+@font-face {
+    font-family: titulos;
+    src: url(../recursos/tipografias/MiriamLibre-Regular.woff);
+}
+
+@font-face {
+    font-family: cuerpo;
+    src: url(../recursos/tipografias/DroidSans.ttf);
+}
+
+.texto-tarjeta{
+    font-family: cuerpo;
+}
+
+.hero-cta{
+    font-family: titulos;
+}
+
+#peliculas-esperadas {
+    font-family: titulos;
+}
 
 #encabezado {
     display: flex;
@@ -35,3 +56,40 @@
     height: auto;
 }
 
+/* Hace que todas las columnas se ajusten igual */
+.grid-tarjeta {
+  display: flex;
+  transition: all 0.3s;
+}
+
+/* Hace que todas las tarjetas se estiren igual */
+.grid-tarjeta > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.grid-tarjeta:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.icono-grid {
+    width: 80px;
+    margin-left: 5px;
+}
+
+/* Móvil y Tablet*/
+@media (max-width: 576px) {
+  .grid-tarjeta > div {
+    min-height: 120px;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 993px) {
+  .grid-tarjeta > div {
+    min-height: 180px;
+    max-height: 120px;
+  }
+}
