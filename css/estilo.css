@@ -2,203 +2,221 @@
    TIPOGRAFÍAS
    ======================================== */
 
-@font-face {
-    font-family: titulos;
-    src: url(../recursos/tipografias/MiriamLibre-Regular.woff);
-}
+    @font-face {
+        font-family: titulos;
+        src: url(../recursos/tipografias/MiriamLibre-Regular.woff);
+    }
 
-@font-face {
-    font-family: cuerpo;
-    src: url(../recursos/tipografias/DroidSans.ttf);
-}
+    @font-face {
+        font-family: cuerpo;
+        src: url(../recursos/tipografias/DroidSans.ttf);
+    }
 
-/* Aplicación de tipografías */
-.hero-cta, #peliculas-esperadas {
-    font-family: titulos;
-}
+    /* Aplicación de tipografías */
+    .hero-cta, #peliculas-esperadas {
+        font-family: titulos;
+    }
 
-.texto-tarjeta, .texto-cta {
-    font-family: cuerpo;
-}
+    .texto-tarjeta {
+        font-family: cuerpo;
+    }
 
-.texto-cta {
-    text-align: center;
-    margin: 0; /* Elimina margen por defecto del <p> */
-}
+    .texto-cta {
+        text-align: center;
+        margin: 0;
+        font-family: cuerpo;
+    }
 
 /* ========================================
    HEADER Y FOOTER
    ======================================== */
 
-#encabezado, #footer {
-    display: flex;
-    width: 100%;
-    background-color: #000000;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Logos responsive - 40% en móvil, 20% desde md */
-#logo-encabezado, #logo-footer {
-    width: 40%;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
-    transition: width 0.3s ease;
-}
-
-@media (min-width: 768px) {
-    #logo-encabezado, #logo-footer {
-        width: 20%;
+    #encabezado, #footer {
+        display: flex;
+        width: 100%;
+        background-color: #000000;
+        justify-content: center;
+        align-items: center;
     }
-}
+
+    /* Logos responsive - 40% en móvil, 20% desde md */
+    #logo-encabezado, #logo-footer {
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        transition: width 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+        #logo-encabezado, #logo-footer {
+            width: 20%;
+        }
+    }
 
 /* ========================================
    SECCIONES HERO
    ======================================== */
 
-/* Hero móvil y escritorio - estilos compartidos */
-#hero-movil, #hero-escritorio {
-    background-size: cover;
-    background-position: center;
-}
+    /* Hero móvil y escritorio - estilos compartidos */
+    #hero-movil, #hero-escritorio {
+        background-size: cover;
+        background-position: center;
+    }
 
-#hero-movil {
-    min-height: 500px;
-}
+    #hero-movil {
+        min-height: 500px;
+    }
 
-#hero-escritorio {
-    min-height: 600px;
-}
+    #hero-escritorio {
+        min-height: 600px;
+    }
 
-#hero-movil img, #hero-escritorio img {
-    width: 100%;
-    height: auto;
-}
+    #hero-movil img, #hero-escritorio img {
+        width: 100%;
+        height: auto;
+    }
 
 /* ========================================
    PERSONALIZACIÓN FORMULARIO MODAL
    ======================================== */
 
-/* Hover sutil */
-.form-check-input:hover {
-    border-color: #ffc107;
-    cursor: pointer;
-}
+   /* Radio buttons y checkboxes - Fondo amarillo cuando están marcados */
+   .form-check-input:checked {
+       background-color: #ffc107 !important;    /* Fuerzo el color con !important */
+       border-color: #ffc107 !important;
+   }
+   
+   /* Check (✓) en negro para checkbox */
+   .form-check-input:checked[type="checkbox"] {
+       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
+   }
+   
+   /* Punto en negro para radio button */
+   .form-check-input:checked[type="radio"] {
+       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23000'/%3e%3c/svg%3e") !important;
+   }
 
-/* Inputs del formulario con focus amarillo */
-.modal .form-control:focus, 
-.modal .form-select:focus,
-.form-check-input:focus {
-    border-color: #ffc107;
-    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
-}
+    /* Hover sutil */
+    .form-check-input:hover {
+        border-color: #ffc107;
+        cursor: pointer;
+    }
 
-.modal .form-label {
-    font-weight: 500;
-}
+    /* Inputs del formulario con focus amarillo */
+    .modal .form-control:focus, 
+    .modal .form-select:focus,
+    .form-check-input:focus {
+        border-color: #ffc107;
+        box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+    }
 
-.modal-title{
-    font-family: titulos;
-}
+    .modal .form-label {
+        font-weight: 500;
+    }
 
-.form-label{
-    font-family: cuerpo;
-}
+    .modal-title{
+        font-family: titulos;
+    }
+
+    .form-label,
+    .form-check label,
+    #btn-envio {
+        font-family: cuerpo;
+    }
 
 
 /* ========================================
    GRID DE TARJETAS
    ======================================== */
 
-/* Contenedor del grid */
-.grid-tarjeta {
-    display: flex;
-    transition: all 0.3s;
-}
+    /* Contenedor del grid */
+    .grid-tarjeta {
+        display: flex;
+        transition: all 0.3s;
+    }
 
-.grid-tarjeta > div {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
+    .grid-tarjeta > div {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
 
-.grid-tarjeta:hover {
-    transform: scale(1.03);
-    cursor: pointer;
-}
+    .grid-tarjeta:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
 
-/* Tarjetas individuales */
-.tarjeta {
-    background-color: #6c757d;
-    min-height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
+    /* Tarjetas individuales */
+    .tarjeta {
+        background-color: #6c757d;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
 
-.tarjeta:hover {
-    transform: scale(1.05);
-    background-color: #5a6268;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+    .tarjeta:hover {
+        transform: scale(1.05);
+        background-color: #5a6268;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
 
-/* Iconos dentro de las tarjetas */
-.icono-grid {
-    width: 60px;
-    margin-left: 5px;
-    margin-top: 5px;
-    transition: transform 0.3s ease;
-}
+    /* Iconos dentro de las tarjetas */
+    .icono-grid {
+        width: 60px;
+        margin-left: 5px;
+        margin-top: 5px;
+        transition: transform 0.3s ease;
+    }
 
-.tarjeta:hover .icono-grid {
-    transform: scale(1.1) rotate(5deg);
-}
+    .tarjeta:hover .icono-grid {
+        transform: scale(1.1) rotate(5deg);
+    }
 
-/* Texto de las tarjetas */
-.texto-tarjeta {
-    transition: color 0.3s ease;
-}
+    /* Texto de las tarjetas */
+    .texto-tarjeta {
+        transition: color 0.3s ease;
+    }
 
-.tarjeta:hover .texto-tarjeta {
-    font-style:oblique
-}
+    /* Sombra amarilla en hover */
+    .tarjeta:hover {
+        box-shadow: 0 8px 24px rgba(255, 193, 7, 0.6), /* Sombra exterior amarilla */
+                    0 0 40px rgba(255, 193, 7, 0.4);    /* Resplandor amarillo */
+    }
 
-/* Sombra amarilla en hover */
-.tarjeta:hover {
-    box-shadow: 0 8px 24px rgba(255, 193, 7, 0.6), /* Sombra exterior amarilla */
-                0 0 40px rgba(255, 193, 7, 0.4);    /* Resplandor amarillo */
-}
 /* ========================================
    ELEMENTOS DECORATIVOS
    ======================================== */
 
-.linea-blanca {
-    border: none;
-    border-top: 2px solid white;
-    margin: 20px auto;
-    width: 95%;
-}
+    .linea-blanca {
+        border: none;
+        border-top: 2px solid white;
+        margin: 20px auto;
+        width: 95%;
+    }
 
 /* ========================================
    MEDIA QUERIES
    ======================================== */
 
-/* Móvil y tablet pequeña */
-@media (max-width: 576px) {
-    .grid-tarjeta > div {
-        min-height: 120px;
-    }
-}
+    /* Fija la altura de las tarjetas de función */
 
-/* Escritorio */
-@media (min-width: 993px) {
-    .grid-tarjeta > div {
-        min-height: 220px;
-        max-height: 120px;
+    /* Móvil y tablet pequeña */
+    @media (max-width: 576px) {
+        .grid-tarjeta > div {
+            min-height: 120px;
+        }
     }
-}
+
+    /* Escritorio */
+    @media (min-width: 993px) {
+        .grid-tarjeta > div {
+            min-height: 220px;
+            max-height: 120px;
+        }
+    }
