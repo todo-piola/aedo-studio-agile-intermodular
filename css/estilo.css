@@ -13,7 +13,7 @@
     }
 
     /* Aplicación de tipografías */
-    .hero-cta, #peliculas-esperadas {
+    .hero-cta, .form-check, .peliculas-esperadas-movil, .peliculas-esperadas-escritorio {
         font-family: titulos;
     }
 
@@ -180,6 +180,7 @@
 
     /* Texto de las tarjetas */
     .texto-tarjeta {
+        color: #000000;
         transition: color 0.3s ease;
     }
 
@@ -187,6 +188,10 @@
     .tarjeta:hover {
         box-shadow: 0 8px 24px rgba(255, 193, 7, 0.6), /* Sombra exterior amarilla */
                     0 0 40px rgba(255, 193, 7, 0.4);    /* Resplandor amarillo */
+    }
+
+    .peliculas-esperadas-movil {
+        font-size: 24px;
     }
 
 /* ========================================

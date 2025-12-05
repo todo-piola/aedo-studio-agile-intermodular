@@ -17,94 +17,94 @@
 
         <!-- Modal -->
         <div class="modal fade" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" id="modal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content bg-dark text-white">
-                    <div class="modal-header border-warning">
-                        <h5 class="modal-title">Regístrate en pocos pasos</h5>
-                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="form-envio-1">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre">
-                            </div>
-                            
-                            <!-- Apellido -->
-                            <div class="mb-3">
-                                <label for="apellido" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="apellido">
-                            </div>
-                            
-                            <!-- Contraseña -->
-                            <div class="mb-3">
-                                <label for="contrasena" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="contrasena">
-                            </div>
-                            
-                            <!-- Confirmar Contraseña -->
-                            <div class="mb-3">
-                                <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
-                                <input type="password" class="form-control" id="confirmarContrasena">
-                            </div>
-                            
-                            <!-- Sexo (Radio buttons) -->
-                            <div class="mb-3">
-                                <label class="form-label">Sexo</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
-                                    <label class="form-check-label" for="masculino">
-                                        Masculino
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sexo" id="femenino" value="femenino">
-                                    <label class="form-check-label" for="femenino">
-                                        Femenino
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sexo" id="prefiero-no-decir" value="prefiero-no-decir" required>
-                                    <label class="form-check-label" for="prefiero-no-decir">
-                                        Prefiero no decir
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <!-- Fecha de Nacimiento -->
-                            <div class="mb-3">
-                                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
-                                <input type="date" class="form-control" id="fechaNacimiento" required>
-                            </div>
-                            
-                            <!-- Activar Notificaciones (Checkbox) -->
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" id="notificaciones">
-                                <label class="form-check-label" for="notificaciones">
-                                    Activar notificaciones
-                                </label>
-                            </div>
-                            
-                            <!-- Recibir Revista Digital (Checkbox) -->
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" id="revistaDigital">
-                                <label class="form-check-label" for="revistaDigital">
-                                    Recibir revista digital
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer border-warning">
-                        <button type="button" class="btn btn-warning" id="btn-envio">Enviar formulario</button>
-                    </div>
-                </div>
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-warning">
+                <h5 class="modal-title">Regístrate en pocos pasos</h5>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+                <form id="form-envio-1">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    
+                    <!-- Apellido -->
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido">
+                    </div>
+                    
+                    <!-- Contraseña -->
+                    <div class="mb-3">
+                        <label for="contrasena" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasena">
+                    </div>
+                    
+                    <!-- Confirmar Contraseña -->
+                    <div class="mb-3">
+                        <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
+                        <input type="password" class="form-control" id="confirmarContrasena">
+                    </div>
+                    
+                    <!-- Sexo (Radio buttons) -->
+                    <div class="mb-3">
+                        <label class="form-label">Sexo</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
+                            <label class="form-check-label" for="masculino">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="femenino" value="femenino">
+                            <label class="form-check-label" for="femenino">
+                                Femenino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="prefiero-no-decir" value="prefiero-no-decir" required>
+                            <label class="form-check-label" for="prefiero-no-decir">
+                                Prefiero no decir
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Fecha de Nacimiento -->
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="fechaNacimiento" required>
+                    </div>
+                    
+                    <!-- Activar Notificaciones (Checkbox) -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="notificaciones">
+                        <label class="form-check-label" for="notificaciones">
+                            Activar notificaciones
+                        </label>
+                    </div>
+                    
+                    <!-- Recibir Revista Digital (Checkbox) -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="revistaDigital">
+                        <label class="form-check-label" for="revistaDigital">
+                            Recibir revista digital
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-warning">
+                <button type="button" class="btn btn-warning" id="btn-envio">Enviar formulario</button>
+            </div>
+        </div>
+        </div>
         </div>
 
         <!-- Hero móvil - Solo visible en pantallas pequeñas -->
         <div class="row d-md-none align-items-center p-5" id="hero-movil" style="background-image: url('img/img-landing-parasite.jpg')">
-            <div class=" text-start text-white p-1">
-                <h2 class="hero-cta">¡Sigue la evolución del cine, sin salir de tu casa!</h2>
+            <div class="text-start text-white p-1">
+                <h2 class="hero-cta">¡Sigue la evolución <br> del cine, sin salir <br> de tu casa!</h2>
                 <a href="#" class="btn btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#modal">    <!-- Activador de modal -->
                     <p class="texto-cta">Regístrate ahora</p>
                 </a>
@@ -114,7 +114,7 @@
         <!-- Hero escritorio - Visible desde md en adelante -->
         <div class="row d-none d-md-flex align-items-center p-5" id="hero-escritorio" style="background-image: url('img/img-dune-landing.jpeg')">
             <div class="col-5 text-left text-white p-5 div-hero">
-                <h2 class="hero-cta">¡Sigue la evolución del cine, sin salir de tu casa!</h2>
+                <h1 class="hero-cta">¡Sigue la evolución del cine, sin salir de tu casa!</h1>
                 <a href="#" class="btn btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#modal">    <!-- Activador de modal -->
                     <p class="texto-cta">Regístrate ahora</p>
                 </a>
@@ -127,37 +127,37 @@
             <div class="col-12 col-md-4 d-flex grid-tarjeta">
                 <div class="mb-2 mt-2 tarjeta">
                     <img src="img/iconos/estrella.png" class="icono-grid">
-                    <p class="p-3 fs-5 text-center texto-tarjeta">Valora tus películas favoritas y expresa tus gustos personales.</p>
+                    <p class="p-3 text-center texto-tarjeta">Valora tus películas favoritas y expresa tus gustos personales.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4 grid-tarjeta">
                 <div class="mb-2 mt-2 tarjeta">
                     <img src="img/iconos/teclado.png" class="icono-grid">
-                    <p class="p-3 fs-5 text-center texto-tarjeta">Escribe reviews sinceras y comparte tus impresiones mas auténticas. </p>
+                    <p class="p-3  text-center texto-tarjeta">Escribe reviews sinceras y comparte tus impresiones mas auténticas. </p>
                 </div>
             </div>
             <div class="col-12 col-md-4 grid-tarjeta">
                 <div class="mb-2 mt-2 tarjeta">
                     <img src="img/iconos/comparte.png" class="icono-grid">
-                    <p class="p-3 fs-5 text-center texto-tarjeta">Comparte listas personalizadas con otros usuarios mostrando tus gustos.</p>
+                    <p class="p-3  text-center texto-tarjeta">Comparte listas personalizadas con otros usuarios mostrando tus gustos.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4 grid-tarjeta">
                 <div class="mt-2 tarjeta">
                     <img src="img/iconos/diamante.png" class="icono-grid">
-                    <p class="p-3 fs-5 text-center texto-tarjeta">Lleva un seguimiento continuo de tus películas favoritas y pendientes.</p>
+                    <p class="p-3  text-center texto-tarjeta">Lleva un seguimiento continuo de tus películas favoritas y pendientes.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4 grid-tarjeta">
                 <div class="mt-2 tarjeta">
                     <img src="img/iconos/corazon.png" class="icono-grid">
-                    <p class="p-3 fs-5 text-center texto-tarjeta">Puntúa listas y películas, valora y refleja tus sentimientos y sensaciones.</p>
+                    <p class="p-3  text-center texto-tarjeta">Puntúa listas y películas, valora y refleja tus sentimientos y sensaciones.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4 grid-tarjeta">
                 <div class="mt-2 tarjeta">
                     <img src="img/iconos/lista.png" class="icono-grid">
-                    <p class="p-3 fs-5 text-center texto-tarjeta">Crea un diario de películas guarda tus sensaciones mas influyentes.</p>
+                    <p class="p-3 text-center texto-tarjeta">Crea un diario de películas guarda tus sensaciones mas influyentes.</p>
                 </div>
             </div>
 
@@ -165,9 +165,13 @@
 
         <!-- Catálogo de películas esperadas -->
         <div class="row p-5 bg-black">
-            <div class="col-12 d-flex">
-            <p class="text-center text-md-start w-100 text-white fs-3" id="peliculas-esperadas">
-                Películas más esperadas de 2026</p>
+            <div class="col-12 d-md-none">
+                <h3 class="text-center text-md-start w-100 text-white peliculas-esperadas-movil">
+                    Películas más esperadas de 2026</h3>
+            </div>
+            <div class="col-12 d-none d-md-flex">
+                <h3 class="text-center text-md-start w-100 text-white peliculas-esperadas-escritorio">
+                    Películas más esperadas de 2026</h3>
             </div>
             <div class="col-4 col-md-2">
                 <div class="bg-dark h-100">
@@ -204,7 +208,7 @@
         <!-- CTA móvil - Solo visible en pantallas pequeñas -->
         <div class="row d-flex d-md-none align-items-center justify-content-center p-5">
             <div class="text-center text-white ">
-                <h2 class="hero-cta">Únete a la comunidad cinéfila del momento y consigue tu medalla distintiva antes que nadie</h2>
+                <h1 class="hero-cta">Únete a la comunidad cinéfila del momento y consigue tu medalla distintiva antes que nadie</h1>
                 <a href="#" class="btn btn-warning mt-1 justify-content-center" data-bs-toggle="modal" data-bs-target="#modal">  <!-- Activador de modal -->
                     <p class="texto-cta">Empieza tu aventura</p>
                 </a>
@@ -214,7 +218,7 @@
         <!-- CTA escritorio - Visible desde md en adelante -->
         <div class="row d-none d-md-flex align-items-center justify-content-center p-5">
             <div class="col-8 text-center text-white p-2">
-                <h2 class="hero-cta">Únete a la comunidad cinéfila del momento y  consigue tu medalla distintiva antes que nadie</h2>
+                <h1 class="hero-cta">Únete a la comunidad cinéfila del momento y  consigue tu medalla distintiva antes que nadie</h1>
                 <a href="#" class="btn btn-warning mt-1 justify-content-center" data-bs-toggle="modal" data-bs-target="#modal"> <!-- Activador de modal -->
                     <p class="texto-cta">Empieza tu aventura</p>
                 </a>
