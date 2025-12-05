@@ -80,10 +80,6 @@
    PERSONALIZACIÓN FORMULARIO MODAL
    ======================================== */
 
-
-/* Efecto focus en amarillo */
-
-
 /* Hover sutil */
 .form-check-input:hover {
     border-color: #ffc107;
@@ -100,6 +96,14 @@
 
 .modal .form-label {
     font-weight: 500;
+}
+
+.modal-title{
+    font-family: titulos;
+}
+
+.form-label{
+    font-family: cuerpo;
 }
 
 
