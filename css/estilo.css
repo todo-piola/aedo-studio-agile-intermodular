@@ -77,6 +77,33 @@
 }
 
 /* ========================================
+   PERSONALIZACIÓN FORMULARIO MODAL
+   ======================================== */
+
+
+/* Efecto focus en amarillo */
+
+
+/* Hover sutil */
+.form-check-input:hover {
+    border-color: #ffc107;
+    cursor: pointer;
+}
+
+/* Inputs del formulario con focus amarillo */
+.modal .form-control:focus, 
+.modal .form-select:focus,
+.form-check-input:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+.modal .form-label {
+    font-weight: 500;
+}
+
+
+/* ========================================
    GRID DE TARJETAS
    ======================================== */
 
