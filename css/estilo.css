@@ -125,6 +125,51 @@
         font-family: cuerpo;
     }
 
+    /*Inputs del formulario con iconos de check o de cross*/
+    input.valido {
+        border-color: greenyellow;
+    }
+
+    input.valido::after {
+        content: "✓";
+        color: greenyellow;
+        font-size: 18px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    input.incorrecto{
+        border-color: orangered;
+    }
+
+    input.incorrecto::after {
+        content: "✗";
+        color: orangered;
+        font-size: 18px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .field{
+        position: relative;
+    }
+
+    .error{
+        color: red;
+    }
+
+    .exito{
+        color: lawngreen;
+    }
+
+    .asterisco{
+        color: #ffc107;
+    }
+
 
 /* ========================================
    GRID DE TARJETAS

@@ -2,18 +2,16 @@ import {REGEX} from './Regex.js';
 
 export function validarNombreApellido(nomApe){
     const nombreLimpio = nomApe ? nomApe.trim() : '';
-
-
-
+    /*
     if (!nombreLimpio){
         return {
             boolean: false,
             errMensaje: "El nombre es un campo obligatorio"}
-    }
+    }*/
 
     if(REGEX.nombreApellido.test(nombreLimpio)){
         return {
-            value: true,
+            boolean: true,
             errMensaje: ""
         };
     }
@@ -28,14 +26,15 @@ export function validarNombreApellido(nomApe){
 
 export function validarCorreo(correo){
     const correoLimpio = correo ? correo.trim() : '';
+    /*
     if (!correoLimpio){
         return {
             boolean: false,
             errMensaje: "El correo es un campo obligatorio"
         };
-    }
+    }*/
 
-    if(!correoLimpio.contains('@')){
+    if(!correoLimpio.includes('@')){
         return {
             boolean: false,
             errMensaje: "Debe incluir @"
@@ -43,16 +42,31 @@ export function validarCorreo(correo){
     }
 
     const partes = correoLimpio.split('@');
+    if(partes.length !== 2){
+        return{
+            boolean: true,
+            errMensaje: "Formato de correo inválido",
+        }
+    }
+
     const [local, dominio] = partes;
 
-    if (!dominio.includes('.') || !dominio.split('.').pop().length < 2){
+    if (!dominio || !dominio.includes('.')){
         return {
             boolean: false,
-            errMensaje: "El dominio debe tener una extensión válida(.com, .es, .uk, etc.)"
+            errMensaje: "El dominio debe tener una extensión (.com, .es, .uk, etc.)"
         };
     }
 
-    if(REGEX.password.test(correo)){
+    const extension = dominio.split('.').pop();
+    if (!extension || extension.length < 2){
+        return {
+            boolean: false,
+            errMensaje: "El dominio debe tener una extensión válida (mín. 2 caracteres)"
+        };
+    }
+
+    if(!REGEX.correo.test(correo)){
         return {
             boolean: false,
             errMensaje: "Formato de Email invalido"
@@ -68,38 +82,31 @@ export function validarCorreo(correo){
 export function validarContrasennia(passwd){
     const passwdLimpia = passwd ? passwd.trim() : '';
 
+    /*
     if (!passwdLimpia){
         return {
             boolean: false,
             errMensaje: "La contraseña es obligatoria"
         };
-    }
+    }*/
 
-    if (REGEX.password.test(passwdLimpia)){
+    if (!REGEX.password.test(passwdLimpia)){
+        return {
+            boolean: false,
+            errMensaje: "La contraseña no cumple los requisitos mínimos. Debe tener mínimo 8 carácteres " +
+                "e incluir una letra mayúscula, una minúscula, un número, un carácter especial"
+        };
+    }
+    else{
         return {
             boolean: true,
             errMensaje: ""
         };
     }
-    else{
-        return {
-            boolean: false,
-            errMensaje: "La contraseña no cumple los requisitos mínimos. Debe tener mínimo 8 carácteres " +
-                "e incluir una letra mayúscula, una minúscula, un número, un carácter especial "
-        };
-    }
 }
 
-export function validarComprobacionPassword(passwd, passwdComprobada){
-
-    if (!passwdComprobada.trim()){
-        return{
-            boolean: false,
-            errMensaje: "El campo no puede quedarse vacio, debe introducir nuevamente su contraseña"
-        }
-    }
-
-    if (passwdComprobada !== passwd){
+export function validarComprobacionPassword(passwdComprobada, passwdOriginal){
+    if (passwdComprobada !== passwdOriginal){
         return{
             boolean: false,
             errMensaje: "Las contraseñas no coinciden"
@@ -108,7 +115,7 @@ export function validarComprobacionPassword(passwd, passwdComprobada){
 
     return{
         boolean: true,
-        errMensaje: "Contraseñas coinciden"
+        errMensaje: ""
     }
 }
 
@@ -119,13 +126,21 @@ export function validarFecha(fecha){
     if (fechaActual < objFecha){
         return{
             boolean: false,
-            errMensaje: "Las contraseñas no coinciden"
+            errMensaje: "No puede seleccionar una fecha superior a la actual"
         }
     }
 
     return{
         boolean: true,
-        errMensaje: "Contraseñas coinciden"
+        errMensaje: "Fecha seleccionada correctamente"
     }
+}
+
+export function campoVacio(input){
+    return input.trim() !== "";
+}
+
+export function validacionFinal(){
+
 }
 

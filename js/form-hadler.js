@@ -2,72 +2,68 @@ import * as v from './validaciones.js';
 import * as u from './ui.js';
 
 export function inputNombreApellido(e){
-    const id = e.target.id;
     const valor = e.target.value;
 
     const objFuncion = v.validarNombreApellido(valor);
 
     if (!objFuncion.boolean){
-        u.mensajesError(id, objFuncion.errMensaje);
+        u.mensajesError("errNombre", objFuncion.errMensaje, e);
     }
     else{
-        u.limpiarMensajesError(id, objFuncion.errMensaje);
+        u.limpiarMensajesError("errNombre", objFuncion.errMensaje, e);
     }
 }
 
 export function inputCorreo(e){
-    const id = e.target.id;
     const valor = e.target.value;
 
     const objFuncion = v.validarCorreo(valor);
 
     if (!objFuncion.boolean){
-        u.mensajesError(id, objFuncion.errMensaje);
+        u.mensajesError("errCorreo", objFuncion.errMensaje, e);
     }
     else{
-        u.limpiarMensajesError(id, objFuncion.errMensaje);
+        u.limpiarMensajesError("errCorreo", objFuncion.errMensaje, e);
     }
 }
 
 export function inputPasswd(e){
-    const id = e.target.id;
     const valor = e.target.value;
 
     const objFuncion = v.validarContrasennia(valor);
 
     if (!objFuncion.boolean){
-        u.mensajesError(id, objFuncion.errMensaje);
+        u.mensajesError("errContrasena", objFuncion.errMensaje, e);
     }
     else{
-        u.limpiarMensajesError(id, objFuncion.errMensaje);
+        u.limpiarMensajesError("errContrasena", objFuncion.errMensaje, e);
     }
 }
 
-export function inputConfirmacion(evento, password){
-    const id = evento.target.id;
+export function inputConfirmacion(evento){
     const valor = evento.target.value;
+    const passwrodOriginal = document.getElementById('contrasena').value.trim();
 
-    const objFuncion = v.validarComprobacionPassword(valor, password);
+    const objFuncion = v.validarComprobacionPassword(valor, passwrodOriginal);
 
     if (!objFuncion.boolean){
-        u.mensajesError(id, objFuncion.errMensaje);
+        u.mensajesError("errConfirmarContrasena", objFuncion.errMensaje, e);
     }
     else{
-        u.limpiarMensajesError(id, objFuncion.errMensaje);
+        u.limpiarMensajesError("errConfirmarContrasena", objFuncion.errMensaje, e);
     }
 }
 
 export function inputFecha(e){
-    const id = e.target.id;
     const valor = e.target.value;
 
     const objFuncion = v.validarFecha(valor);
 
     if (!objFuncion.boolean){
-        u.mensajesError(id, objFuncion.errMensaje);
+        u.mensajesError("errNacimiento", objFuncion.errMensaje);
     }
     else{
-        u.limpiarMensajesError(id, objFuncion.errMensaje);
+        u.limpiarMensajesError("errNacimiento", objFuncion.errMensaje);
     }
 }
 
